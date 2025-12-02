@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+.sass-cache/
+*.css.map
+
+# Environment variables
+.env
+.env.local
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Shopify
+config/settings_data.json
+config/settings_schema.json
+.shopifyignore
+
+# Build output
+assets/*.css
+assets/*.css.map
+
+# Theme kit
+config.yml
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

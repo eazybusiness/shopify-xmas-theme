@@ -1,0 +1,29 @@
+{% comment %}
+  Christmas Banner Snippet
+  Include this in your theme's header or another prominent location
+  
+  Usage: {% render 'christmas-banner' %}
+  With custom text: {% render 'christmas-banner', banner_text: 'Your custom message', show_countdown: true %}
+{% endcomment %}
+
+{%- liquid
+  assign banner_text = banner_text | default: '🎄 Weihnachts-Special: Entdecke unsere Weihnachtsangebote!'
+  assign show_countdown = show_countdown | default: true
+-%}
+
+<div class="holiday-banner">
+  <div class="page-width">
+    <p>{{ banner_text }}</p>
+  </div>
+</div>
+
+{% if show_countdown %}
+<div class="page-width">
+  <div class="christmas-countdown">
+    <h3>🎅 Countdown bis Weihnachten</h3>
+    <div id="christmas-countdown" class="countdown-timer">
+      <!-- Countdown will be inserted here by JavaScript -->
+    </div>
+  </div>
+</div>
+{% endif %}
