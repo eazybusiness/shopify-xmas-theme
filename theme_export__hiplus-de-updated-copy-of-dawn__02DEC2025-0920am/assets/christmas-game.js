@@ -43,19 +43,42 @@ class ChristmasBikeGame {
       highScoreEl.textContent = `Récord: ${this.highScore}`;
     }
     
-    // Event listeners
-    this.startBtn.addEventListener('click', () => this.startGame());
-    this.canvas.addEventListener('click', () => this.jump());
-    this.canvas.addEventListener('touchstart', (e) => {
+    // Event listeners - Button with both click and touch
+    this.startBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      this.jump();
+      e.stopPropagation();
+      this.startGame();
+    });
+    
+    this.startBtn.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      this.startGame();
+    }, { passive: false });
+    
+    // Canvas touch/click for jumping
+    this.canvas.addEventListener('click', (e) => {
+      if (this.isPlaying) {
+        this.jump();
+      }
+    });
+    
+    this.canvas.addEventListener('touchstart', (e) => {
+      if (this.isPlaying) {
+        e.preventDefault();
+        this.jump();
+      }
     }, { passive: false });
     
     // Keyboard support
     document.addEventListener('keydown', (e) => {
-      if (e.code === 'Space' && this.isPlaying) {
+      if (e.code === 'Space') {
         e.preventDefault();
-        this.jump();
+        if (this.isPlaying) {
+          this.jump();
+        } else {
+          this.startGame();
+        }
       }
     });
   }

@@ -79,35 +79,83 @@
 /* Christmas Countdown */
 .christmas-countdown {
   text-align: center;
-  padding: 15px;
-  margin: 20px 0;
+  padding: 15px 10px;
+  margin: 15px 0;
   background: rgba(255,255,255,0.1);
   border-radius: 8px;
+}
+
+.christmas-countdown h3 {
+  font-size: 1rem;
+  margin: 0 0 10px 0;
 }
 
 .countdown-timer {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 8px;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .countdown-item {
   background: rgba(255,255,255,0.9);
-  padding: 8px 12px;
+  padding: 6px 8px;
   border-radius: 6px;
-  min-width: 60px;
+  min-width: 50px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .countdown-number {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
   color: #d12c2c;
 }
 
 .countdown-label {
-  font-size: 0.8em;
+  font-size: 0.65em;
   text-transform: uppercase;
   color: #333;
+}
+
+/* Mobile responsive countdown */
+@media (max-width: 400px) {
+  .christmas-countdown {
+    padding: 10px 5px;
+    margin: 10px 0;
+  }
+  
+  .christmas-countdown h3 {
+    font-size: 0.9rem;
+  }
+  
+  .countdown-timer {
+    gap: 5px;
+  }
+  
+  .countdown-item {
+    min-width: 42px;
+    padding: 5px 6px;
+  }
+  
+  .countdown-number {
+    font-size: 1em;
+  }
+  
+  .countdown-label {
+    font-size: 0.55em;
+  }
+}
+
+/* Holiday Banner mobile */
+@media (max-width: 480px) {
+  .holiday-banner {
+    font-size: 0.9em;
+    padding: 8px 10px;
+  }
+  
+  .holiday-banner p {
+    margin: 0;
+    line-height: 1.3;
+  }
 }
