@@ -54,19 +54,19 @@ document.addEventListener('DOMContentLoaded', function() {
       countdownEl.innerHTML = `
         <div class="countdown-item">
           <div class="countdown-number">${days}</div>
-          <div class="countdown-label">Tage</div>
+          <div class="countdown-label">Días</div>
         </div>
         <div class="countdown-item">
           <div class="countdown-number">${hours}</div>
-          <div class="countdown-label">Stunden</div>
+          <div class="countdown-label">Horas</div>
         </div>
         <div class="countdown-item">
           <div class="countdown-number">${minutes}</div>
-          <div class="countdown-label">Minuten</div>
+          <div class="countdown-label">Minutos</div>
         </div>
         <div class="countdown-item">
           <div class="countdown-number">${seconds}</div>
-          <div class="countdown-label">Sekunden</div>
+          <div class="countdown-label">Segundos</div>
         </div>
       `;
     }
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add Christmas badge to products in the Christmas collection
   function addChristmasBadges() {
     // Only add badges on the Christmas collection page
-    if (!window.location.pathname.includes('/collections/weihnachten') && 
+    if (!window.location.pathname.includes('/collections/navidad') && 
         !window.location.pathname.includes('/collections/christmas')) {
       return;
     }
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       const badge = document.createElement('div');
       badge.className = 'christmas-badge';
-      badge.textContent = '🎄 Weihnachtsangebot';
+      badge.textContent = '🎄 Oferta Navideña';
       product.style.position = 'relative';
       product.appendChild(badge);
     });

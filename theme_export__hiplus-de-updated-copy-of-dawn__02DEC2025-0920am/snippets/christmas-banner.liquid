@@ -7,7 +7,7 @@
 {% endcomment %}
 
 {%- liquid
-  assign banner_text = banner_text | default: '🎄 Weihnachts-Special: Entdecke unsere Weihnachtsangebote!'
+  assign banner_text = banner_text | default: '🎄 ¡Ofertas de Navidad! Descubre nuestros descuentos especiales'
   assign show_countdown = show_countdown | default: true
 -%}
 
@@ -20,7 +20,7 @@
 {% if show_countdown %}
 <div class="page-width">
   <div class="christmas-countdown">
-    <h3>🎅 Countdown bis Weihnachten</h3>
+    <h3>🎅 Cuenta Regresiva para Navidad</h3>
     <div id="christmas-countdown" class="countdown-timer">
       <!-- Countdown will be inserted here by JavaScript -->
     </div>

@@ -14,14 +14,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "🎄 Weihnachtsangebote 🎄",
+            "heading": "🎄 Ofertas de Navidad 🎄",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Entdecke unsere exklusiven Weihnachtsrabatte! Perfekte Geschenke für deine Liebsten.</p>"
+            "text": "<p>¡Descubre nuestros descuentos exclusivos de Navidad! Regalos perfectos para tus seres queridos.</p>"
           }
         }
       },
