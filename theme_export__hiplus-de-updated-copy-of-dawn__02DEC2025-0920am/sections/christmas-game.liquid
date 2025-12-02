@@ -1,0 +1,81 @@
+{{ 'christmas-game.css' | asset_url | stylesheet_tag }}
+
+<div class="xmas-game-section page-width">
+  <div class="xmas-game-container" id="xmas-bike-game">
+    <div class="xmas-game-wrapper">
+      
+      <div class="xmas-game-header">
+        <div class="xmas-game-title">
+          🚴 {{ section.settings.game_title }}
+        </div>
+        <div class="xmas-game-score">🎁 0</div>
+      </div>
+      
+      <div class="xmas-game-canvas">
+        <div class="xmas-game-ground"></div>
+        
+        <!-- Game overlay (start/game over) -->
+        <div class="xmas-game-overlay">
+          <h3>{{ section.settings.start_title }}</h3>
+          <p>{{ section.settings.start_description }}</p>
+          <p class="final-score"></p>
+          <p class="xmas-game-highscore">Récord: 0</p>
+          <button class="xmas-game-btn">🎮 {{ section.settings.start_button }}</button>
+        </div>
+      </div>
+      
+      <div class="xmas-game-instructions">
+        📱 {{ section.settings.instructions }}
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'christmas-game.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Christmas Bike Game",
+  "tag": "section",
+  "class": "christmas-game-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "game_title",
+      "label": "Game Title",
+      "default": "Entrega Navideña"
+    },
+    {
+      "type": "text",
+      "id": "start_title",
+      "label": "Start Screen Title",
+      "default": "🎄 ¡Entrega los Regalos!"
+    },
+    {
+      "type": "textarea",
+      "id": "start_description",
+      "label": "Start Screen Description",
+      "default": "Esquiva los obstáculos y recoge los regalos"
+    },
+    {
+      "type": "text",
+      "id": "start_button",
+      "label": "Start Button Text",
+      "default": "¡Jugar!"
+    },
+    {
+      "type": "text",
+      "id": "instructions",
+      "label": "Instructions Text",
+      "default": "Toca la pantalla para saltar"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Christmas Bike Game",
+      "category": "Interactive"
+    }
+  ]
+}
+{% endschema %}
