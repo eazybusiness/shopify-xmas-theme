@@ -215,11 +215,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // Add holiday class to body
       document.body.classList.add('holiday-theme');
       
-      // Create all decorations
+      // Snowflakes only
       createSnowflakes();
-      createSantaSleigh();
-      createCornerDecorations();
-      createTwinklingStars();
       
       // Update countdown every second
       updateCountdown();
@@ -227,8 +224,6 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Add badges to Christmas collection products
       addChristmasBadges();
-      
-      console.log('🎄 Christmas theme activated!');
     }
   }
 
